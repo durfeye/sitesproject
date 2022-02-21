@@ -50,29 +50,60 @@ const mobileMenu = () => {
 }
 
 const changeDescText = () => {
-        if (shortDescText.textContent == 'najwyższą jakość') {
-            shortDescText.textContent = 'najlepszą obsługę';
-            shortDescText.classList.remove('thirdChange');
-            shortDescText.classList.add('secondChange');   
-        }
-        else if (shortDescText.textContent == 'najlepszą obsługę') {
-            shortDescText.textContent = 'konkurencyjne ceny';
-            shortDescText.classList.remove('secondChange');
-            shortDescText.classList.add('firstChange');              
-        }
-        else if (shortDescText.textContent == 'konkurencyjne ceny') {
-            shortDescText.textContent = 'najwyższą jakość';
-            shortDescText.classList.remove('firstChange');
-            shortDescText.classList.add('thirdChange'); 
-        }
+    if (shortDescText.textContent == 'najwyższą jakość') {
+        shortDescText.textContent = 'najlepszą obsługę';
+        shortDescText.classList.remove('thirdChange');
+        shortDescText.classList.add('secondChange');
+    }
+    else if (shortDescText.textContent == 'najlepszą obsługę') {
+        shortDescText.textContent = 'konkurencyjne ceny';
+        shortDescText.classList.remove('secondChange');
+        shortDescText.classList.add('firstChange');
+    }
+    else if (shortDescText.textContent == 'konkurencyjne ceny') {
+        shortDescText.textContent = 'najwyższą jakość';
+        shortDescText.classList.remove('firstChange');
+        shortDescText.classList.add('thirdChange');
+    }
 }
+
+const loadingSite = (() => {
+    const loadingLongDesc = () => {
+        if (document.documentElement.clientWidth > 950) {
+            if (window.pageYOffset >= frontLongDesc.offsetTop - 500) {
+                frontLongDesc.classList.add('active');
+            }
+
+        }
+    }
+    const loadingUsageElements = () => {
+        if (document.documentElement.clientWidth > 950) {
+            const usageElements = document.querySelectorAll('.usageElement');
+            if (window.pageYOffset >= frontLongDesc.offsetTop - 100) {
+                usageElements.forEach(singleElement => {
+                    singleElement.classList.add('active');
+                });
+            }
+        }
+    }
+    return {
+        loadingLongDesc,
+        loadingUsageElements,
+    }
+})();
 
 const changeTextInterval = () => {
     setInterval(changeDescText, 3000);
 }
 
-window.onscroll = function () { stickyMenu() };
-window.onscroll = function () { toggleOfferBox() };
+window.onscroll = function () {
+    stickyMenu();
+    toggleOfferBox();
+
+    loadingSite.loadingLongDesc();
+    loadingSite.loadingUsageElements();
+
+};
 window.onload = function () { changeTextInterval() };
 
 mobileMenuBtn.addEventListener('click', mobileMenu);
