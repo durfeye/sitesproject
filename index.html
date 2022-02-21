@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +10,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/40fe8f2b83.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
 </head>
+
 <body>
+    <video autoplay muted loop class="backgroundVideo">
+        <source src="background.mp4" type="video/mp4">
+    </video>
     <header>
         <nav class="topNav">
             <!-- <ul class="contactOptions">
@@ -21,7 +26,7 @@
                 <li class="contactOption">firma@firma.pl</li>
             </ul> -->
             <section class="logo">
-                LOGO
+                <span style="color: rgb(242, 170, 76)">K</span>AMA
             </section>
             <section class="menu">
                 <button class="mobileMenuBtn">
@@ -36,7 +41,7 @@
         </nav>
         <section class="frontShortDesc">
             <h1>
-                Stawiamy na najwyższą jakość...
+                <span style="color: rgb(242, 170, 76)">S</span>tawiamy na najwyższą jakość...
             </h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit Officiis quo cumque.
@@ -57,35 +62,149 @@
             <i class="fas fa-mouse"></i>
         </button>
     </header>
-    <section class="frontLongDesc">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptatibus quos, magnam sunt rem illo recusandae amet! Quam voluptatibus est repudiandae maxime ad dolorum eum, libero obcaecati repellat fugiat ipsum.
-    </section>
-    <section class="typesOfFoil">
-        <div class="foilType">
-            <i>ICON</i>
-            <p>HDPE</p>
-        </div>
-        <div class="foilType">
-            <i>LDPE</p>
-        </div>
-        <div class="foilType">
-            <i>ICON</i>
-            <p>PA/PE</p>
-        </div>
+    <section class="aboutUs">
+        <section class="frontLongDesc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptatibus quos, magnam sunt rem illo
+            recusandae amet! Quam voluptatibus est repudiandae maxime ad dolorum eum, libero obcaecati repellat fugiat
+            ipsum.
+        </section>
+        <section class="typesOfFoil">
+            <div class="foilType">
+                <i class="fa fa-bars"></i>
+                <p>HDPE</p>
+            </div>
+            <div class="foilType">
+                <i class="fa fa-bars"></i>
+                <p>LDPE</p>
+            </div>
+            <div class="foilType">
+                <i class="fa fa-bars"></i>
+                <p>PA/PE</p>
+            </div>
+        </section>
     </section>
     <section class="usage">
-        <!-- <img src="33.jpg"> -->
+        
         <div class="usageNameBox">
             <h1 class="usageName">
-                Przykładowe zastosowanie
+                PRZYKŁADOWE ZASTOSOWANIE
             </h1>
-        </div>    
-        <div class="usageDesc">
-            <h1 class="usageTitle">Tytuł</h1>
-            <p class="usageDesc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex maiores, atque odit iusto porro totam magnam, molestiae molestias sed quos recusandae dolorem possimus modi pariatur eligendi ipsum, aperiam iste debitis.
-            </p>
-        </div>    
+        </div>
     </section>
+    <section class="checkOurOffer">
+        <div class="offerShadow"></div>
+        <div class="offerSection">
+            <div class="offerBox">
+                <button class="offerBtn">
+                    SPRAWDŹ OFERTĘ
+                </button>
+                <div class="trustUs">
+                    <h1>
+                        ZAUFAJ NAM
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="whyUs">
+        <div class="whyUsContent">
+        <h1>DLACZEGO MY?</h1>
+        <div class="whyUsOptions">
+            <article class="whyUsOption">
+                <i class="fa-solid fa-user-gear"></i>
+                <h2>Możliwość wyboru</h2>
+                <p class="whyUsText">
+                    Zamówienia realizowane są zgodnie z indywidualnymi potrzebami klienta - od wielkości, przez grubość
+                    po kolor oraz nadruk worka.
+                </p>
+            </article>
+            <article class="whyUsOption">
+                <i class="fa fa-clock"></i>
+                <h2>Szybka realizacja</h2>
+                <p class="whyUsText">
+                    Po ustaleniu wszelkich wymagań dotyczących zamówienia, od razu przystępujemy do realizacji, a
+                    następnie wysyłki skompletowanego towaru.
+                </p>
+            </article>
+            <article class="whyUsOption">
+                <i class="fa-solid fa-hourglass-start"></i>
+                <h2>Doświadczenie</h2>
+                <p class="whyUsText">
+                    Firma KAMA P.P.H.U. została założona z myślą o dostarczaniu najlepszych produktów. Cieszymy się
+                    20-letnim doświadczeniem w branży foliowej.
+                </p>
+            </article>
+        </div>
+    </div>
+    </section>
+    <footer class="footer">
+        <div class="contactFooter">
+            <form class="contactForm" novalidate>
+                <p>SKONTAKTUJ SIĘ Z NAMI</p>
+                <label from="firstName">
+                    <input type="text" id="firstName" name="firstName" minlength="3" pattern="[A-Za-z]*"
+                        placeholder="Imię" required>
+                    <span class="errorMsg countryError" aria-live="polite"></span>
+                </label>
+                <label from="lastName">
+                    <input type="text" id="lastName" name="lastName" minlength="3" pattern="[A-Za-z]*"
+                        placeholder="Nazwisko" required>
+                    <span class="errorMsg countryError" aria-live="polite"></span>
+                </label>
+                <label for="mail">
+                    <input type="email" id="mail" name="mail" placeholder="Adres e-mail" required>
+                    <span class="errorMsg mailError" aria-live="polite"></span>
+                </label>
+                <label for="message">
+                    <textarea type="text" id="message" name="message" placeholder="Wiadomość" required></textarea>
+                    <span class="errorMsg validatePassError" aria-live="polite"></span>
+                </label>
+                <button>WYŚLIJ</button>
+            </form>
+            <h2 class="mapName">NASZA LOKALIZACJA:</h2>
+            <iframe allowfullscreen="" frameborder="0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAfEFYuvwHE5c_NypEg9Qog_UHox772iCA&amp;q=Poland%2C+S%C5%82upsk+Poniatowskiego+27&amp;zoom=15"
+                width="100%" height="300"></iframe>
+        </div>
+        <div class="contactText">
+            <h1>KONTAKT</h1>
+        </div>
+        <div class="footerLinks">
+            <div class="upperFooter">
+                <div class="footerAboutUs">
+                    <h2>KAMA - dla nas liczy się jakość...</h2>
+                    <p>Firma rodzinna - na rynku od 2012 roku, będąca wynikiem 20 letniego doświadczenia w branży opakowań, zajmująca się produkcją wyrobów foliowych LDPE, HDPE, PA/PE.</p>
+                </div>
+                <div class="footerLocation">
+                    <h2>Dane kontaktowe</h2>
+                    <p>ul. Józefa Poniatowskiego 27</p>
+                    <p>Słupsk 76-200</p>
+                    <p>biuro@kama.slupsk.pl</p>
+                    <p>+48 500 719 801</p>
+                </div>
+            </div>
+            <div class="downFooter">
+                <div class="footerContactForms">
+                    <i class="fa-solid fa-square-phone"></i>
+                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-brands fa-facebook-square"></i>
+                </div>
+                <ul class="footerMenu">
+                    <li class="footerItem">O NAS</li>
+                    <li class="footerItem">OFERTA</li>
+                    <li class="footerItem">KONTAKT</li>
+                </ul>
+                <div class="footerEnding">
+                    <p>KAMA P.P.H.U Katarzyna Szubert © 2022</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="goTopBtn">
+        <a href="#">
+            <i class="fa-solid fa-circle-arrow-up"></i>
+        </a>
+    </div>
 </body>
+
 </html>
