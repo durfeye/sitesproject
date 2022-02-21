@@ -6,6 +6,7 @@ const offerBox = document.querySelector('.offerBox');
 const frontLongDesc = document.querySelector('.frontLongDesc');
 const toggleOfferPosition = frontLongDesc.offsetTop;
 const goTopBtn = document.querySelector('.goTopBtn');
+let shortDescText = document.querySelector('.shortDescText');
 
 const stickyMenu = () => {
     if (document.documentElement.clientWidth > 950) {
@@ -48,8 +49,31 @@ const mobileMenu = () => {
 
 }
 
+const changeDescText = () => {
+        if (shortDescText.textContent == 'najwyższą jakość') {
+            shortDescText.textContent = 'najlepszą obsługę';
+            shortDescText.classList.remove('thirdChange');
+            shortDescText.classList.add('secondChange');   
+        }
+        else if (shortDescText.textContent == 'najlepszą obsługę') {
+            shortDescText.textContent = 'konkurencyjne ceny';
+            shortDescText.classList.remove('secondChange');
+            shortDescText.classList.add('firstChange');              
+        }
+        else if (shortDescText.textContent == 'konkurencyjne ceny') {
+            shortDescText.textContent = 'najwyższą jakość';
+            shortDescText.classList.remove('firstChange');
+            shortDescText.classList.add('thirdChange'); 
+        }
+}
+
+const changeTextInterval = () => {
+    setInterval(changeDescText, 3000);
+}
+
 window.onscroll = function () { stickyMenu() };
 window.onscroll = function () { toggleOfferBox() };
+window.onload = function () { changeTextInterval() };
 
 mobileMenuBtn.addEventListener('click', mobileMenu);
 
@@ -115,3 +139,4 @@ slideButtons.forEach(slideBtn => {
         }
     });
 });
+
