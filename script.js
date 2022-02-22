@@ -202,17 +202,33 @@ offerNames.forEach(singleName => {
         let ldpeelements = document.querySelector('.ldpeElements');
         let hdpeelements = document.querySelector('.hdpeElements');
         let papeelements = document.querySelector('.papeElements');
+        let prevName;
         if (singleName.classList.contains('ldpe')) {
+            if (prevName != undefined) {
+                prevName.classList.remove('active');
+            }
+            singleName.classList.add('active');            
+            prevName = singleName;
             ldpeelements.classList.add('active');
             hdpeelements.classList.remove('active');
             papeelements.classList.remove('active');
         }
         else if (singleName.classList.contains('hdpe')) {
+            if (prevName != undefined) {
+                prevName.classList.remove('active');
+            }
+            singleName.classList.add('active');            
+            prevName = singleName;
             hdpeelements.classList.add('active');
             ldpeelements.classList.remove('active');
             papeelements.classList.remove('active');
         }
         else if (singleName.classList.contains('pape')) {
+            if (prevName != undefined) {
+                prevName.classList.remove('active');
+            }
+            singleName.classList.add('active');            
+            prevName = singleName;
             papeelements.classList.add('active');
             ldpeelements.classList.remove('active');
             hdpeelements.classList.remove('active');
