@@ -26,7 +26,7 @@
                 <li class="contactOption">firma@firma.pl</li>
             </ul> -->
             <section class="logo">
-                <span class="orangeColored">K</span>AMA
+                <a href="index.html"><span class="orangeColored">K</span>AMA</a>
             </section>
             <section class="menu">
                 <button class="mobileMenuBtn">
@@ -49,13 +49,13 @@
             </p>
             <div class="frontBtns">
                 <button class="frontBtn writeToUs">
-                    Napisz
+                    <a href="mailto: biuro@kama.slupsk.pl">Napisz</a>
                 </button>
                 <button class="frontBtn offer">
-                    Oferta
+                    <a href="oferta.html">Oferta</a>
                 </button>
                 <button class="frontBtn callToUs">
-                    Zadzwoń
+                    <a href="tel:+48500719801">Zadzwoń</a>
                 </button>
             </div>
         </section>
@@ -129,7 +129,7 @@
                         ZAUFAJ
                     </h1>
                     <button class="offerBtn">
-                        SPRAWDŹ OFERTĘ
+                        <a href="oferta.html">SPRAWDŹ OFERTĘ</a>
                     </button>
                     <h1>
                         NAM
@@ -172,15 +172,15 @@
     </section>
     <footer class="footer" id="contactFooter">
         <div class="contactFooter">
-            <form class="contactForm" novalidate>
+            <form action="sendmail.php" class="contactForm" novalidate>
                 <p><span class="orangeColored">—</span> SKONTAKTUJ SIĘ Z NAMI <span class="orangeColored">—</span></p>
                 <label from="firstName">
-                    <input type="text" id="firstName" name="firstName" minlength="3" pattern="[A-Za-z]*"
+                    <input type="text" id="userName" name="userName" minlength="3" pattern="[A-Za-z]*"
                         placeholder="Imię i nazwisko" required>
                     <span class="errorMsg countryError" aria-live="polite"></span>
                 </label>
                 <label from="lastName">
-                    <input type="text" id="lastName" name="lastName" minlength="9" pattern="[0-9]*"
+                    <input type="text" id="phoneNumber" name="phoneNumber" minlength="9" pattern="[0-9]*"
                         placeholder="Numer telefonu" required>
                     <span class="errorMsg countryError" aria-live="polite"></span>
                 </label>
@@ -192,7 +192,7 @@
                     <textarea type="text" id="message" name="message" placeholder="Wiadomość" required></textarea>
                     <span class="errorMsg validatePassError" aria-live="polite"></span>
                 </label>
-                <button>WYŚLIJ</button>
+                <input type="submit" value="WYŚLIJ">
             </form>
             <h2 class="mapName"><span class="orangeColored">—</span> NASZA LOKALIZACJA <span
                     class="orangeColored">—</span></h2>

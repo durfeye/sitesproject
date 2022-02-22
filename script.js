@@ -23,15 +23,17 @@ const stickyMenu = () => {
 
 const toggleOfferBox = () => {
     const frontLongDesc = document.querySelector('.frontLongDesc');
-    const toggleOfferPosition = frontLongDesc.offsetTop;
-    if (document.documentElement.clientWidth > 950) {
-        if (window.pageYOffset >= toggleOfferPosition) {
-            offerBox.style.display = 'flex';
-            goTopBtn.classList.add('active');
-        }
-        else {
-            offerBox.style.display = 'none';
-            goTopBtn.classList.remove('active');
+    if (frontLongDesc != null) {
+        const toggleOfferPosition = frontLongDesc.offsetTop;
+        if (document.documentElement.clientWidth > 950) {
+            if (window.pageYOffset >= toggleOfferPosition) {
+                offerBox.style.display = 'flex';
+                goTopBtn.classList.add('active');
+            }
+            else {
+                offerBox.style.display = 'none';
+                goTopBtn.classList.remove('active');
+            }
         }
     }
 }
@@ -196,18 +198,18 @@ const changeOffer = (singleName) => {
         hdpeelements.classList.remove('active');
     }
 }
-
+let prevName;
 offerNames.forEach(singleName => {
     singleName.addEventListener('click', () => {
         let ldpeelements = document.querySelector('.ldpeElements');
         let hdpeelements = document.querySelector('.hdpeElements');
         let papeelements = document.querySelector('.papeElements');
-        let prevName;
+
         if (singleName.classList.contains('ldpe')) {
             if (prevName != undefined) {
                 prevName.classList.remove('active');
             }
-            singleName.classList.add('active');            
+            singleName.classList.add('active');
             prevName = singleName;
             ldpeelements.classList.add('active');
             hdpeelements.classList.remove('active');
@@ -216,9 +218,13 @@ offerNames.forEach(singleName => {
         else if (singleName.classList.contains('hdpe')) {
             if (prevName != undefined) {
                 prevName.classList.remove('active');
+                singleName.classList.add('active');
+                prevName = singleName;
             }
-            singleName.classList.add('active');            
-            prevName = singleName;
+            else {
+                singleName.classList.add('active');
+                prevName = singleName;
+            }
             hdpeelements.classList.add('active');
             ldpeelements.classList.remove('active');
             papeelements.classList.remove('active');
@@ -227,7 +233,7 @@ offerNames.forEach(singleName => {
             if (prevName != undefined) {
                 prevName.classList.remove('active');
             }
-            singleName.classList.add('active');            
+            singleName.classList.add('active');
             prevName = singleName;
             papeelements.classList.add('active');
             ldpeelements.classList.remove('active');

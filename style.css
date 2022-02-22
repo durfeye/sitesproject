@@ -39,6 +39,10 @@ header {
     padding-top: 2rem;
     font-size: 5rem;
 }
+.logo a {
+    color:rgb(232, 231, 230);
+    text-decoration: none;
+}
 .mobileMenuBtn {
     display: none;
 }
@@ -54,7 +58,7 @@ header {
     height: 5rem;
     margin: 0;
     padding: 0;
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .stickyMenu {
     width: 100%;
@@ -168,6 +172,10 @@ header {
 }
 .frontBtns .frontBtn:hover {
     background: rgba(242, 170, 76, 0.5);
+}
+.frontBtn a {
+    color:rgb(232, 231, 230);
+    text-decoration: none;
 }
 .goDownBtn {
     align-self: center;
@@ -396,6 +404,10 @@ header {
     align-self: center;
     transition: 0.2s ease-in-out;
 }
+.offerBtn a {
+    color: rgb(232, 231, 230);
+    text-decoration: none;
+}
 .offerBox .offerBtn:hover {
     font-size: 3rem;
     background: rgb(242, 170, 76);
@@ -609,20 +621,36 @@ footer .contactText {
     align-items: center;
     list-style-type: none;
     font-size: 2rem;
-    transition: 0.2s ease-in-out;
-    border-bottom: 2px solid transparent;
     text-indent: 0.3rem;
+    cursor: pointer;
+    height: 100%;
+    width: 8%;
+    text-align: center;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+}
+.offerName span {
+    color: rgb(232, 231, 230) !important;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s ease-in-out;
+    padding-bottom: 0.3rem;
+}
+.offerName span:hover {
+    color: rgb(242, 170, 76) !important;
+    border-color: rgb(232, 231, 230) !important;
 }
 .offerName.active {
     background: rgb(232, 231, 230);
-    color: rgb(24, 24, 26);
 }
-.offerNames .offerName:hover {
-    color: rgb(242, 170, 76);
-    border-color: rgb(232, 231, 230);
+.offerName.active span {
+    color:rgb(24, 24, 26) !important;
+}
+.offerName.active span:hover {
+    color:rgb(242, 170, 76) !important;
 }
 .offerNames span {
     font-size: 2rem;
+    padding-bottom: 0.3rem;
     color: rgb(242, 170, 76);
 }
 .offerContent {
@@ -839,6 +867,8 @@ footer .contactText {
     }
     .offerNames .offerName {
         font-size: 1.3rem;
+        width: 25%;
+        margin-bottom: -0.07rem;;
     }
     .offerNames span {
         font-size: 1.3rem;
@@ -862,7 +892,7 @@ footer .contactText {
         min-width: 25%;
         max-width: 30%;
     }
-    footer {
+    footer.active {
         margin-top: 45rem;
     }
 }
@@ -873,7 +903,7 @@ footer .contactText {
     .offerElement {
         min-width: 35%;
     }
-    footer {
+    footer.active {
         margin-top: 72rem;
     }
 }
@@ -884,7 +914,7 @@ footer .contactText {
     .offerElement {
         min-width: 70% !important;
     }
-    footer {
+    footer.active {
         margin-top: 150rem;
     }
 }
@@ -895,7 +925,7 @@ footer .contactText {
     .offerElement {
         min-width: 90% !important;
     }
-    footer {
+    footer.active {
         margin-top: 150rem;
     }
 }
