@@ -6,6 +6,7 @@ const offerBox = document.querySelector('.offerBox');
 const goTopBtn = document.querySelector('.goTopBtn');
 let shortDescText = document.querySelector('.shortDescText');
 let indexSite = document.querySelector('.indexSite');
+const offerNames = document.querySelectorAll('.offerName');
 
 const stickyMenu = () => {
     if (document.documentElement.clientWidth > 950) {
@@ -175,3 +176,46 @@ slideButtons.forEach(slideBtn => {
     });
 });
 
+const changeOffer = (singleName) => {
+    let ldpeelements = document.querySelector('.ldpeElements');
+    let hdpeelements = document.querySelector('.hdpeElements');
+    let papeelements = document.querySelector('.papeElements');
+    if (singleName.classList.contains('ldpe')) {
+        ldpeelements.classList.add('active');
+        hdpeelements.classList.add('active');
+        papeelements.classList.add('active');
+    }
+    else if (singleName.classList.contains('hdpe')) {
+        hdpeelements.classList.add('active');
+        ldpeelements.classList.remove('active');
+        papeelements.classList.remove('active');
+    }
+    else if (singleName.classList.contains('pape')) {
+        papeelements.classList.add('active');
+        ldpeelements.classList.remove('active');
+        hdpeelements.classList.remove('active');
+    }
+}
+
+offerNames.forEach(singleName => {
+    singleName.addEventListener('click', () => {
+        let ldpeelements = document.querySelector('.ldpeElements');
+        let hdpeelements = document.querySelector('.hdpeElements');
+        let papeelements = document.querySelector('.papeElements');
+        if (singleName.classList.contains('ldpe')) {
+            ldpeelements.classList.add('active');
+            hdpeelements.classList.remove('active');
+            papeelements.classList.remove('active');
+        }
+        else if (singleName.classList.contains('hdpe')) {
+            hdpeelements.classList.add('active');
+            ldpeelements.classList.remove('active');
+            papeelements.classList.remove('active');
+        }
+        else if (singleName.classList.contains('pape')) {
+            papeelements.classList.add('active');
+            ldpeelements.classList.remove('active');
+            hdpeelements.classList.remove('active');
+        }
+    });
+});

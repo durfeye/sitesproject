@@ -583,6 +583,78 @@ footer .contactText {
     min-height: 70rem;
     margin-bottom: -45rem;
 }
+.offerNamesBox {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: rgb(24, 24, 26);
+    min-height: 10rem;
+    margin-top: -3.5rem;
+}
+.offerNames {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    color: rgb(232, 231, 230);
+}
+.offerNames .offerName {
+    list-style-type: none;
+    font-size: 2rem;
+    transition: 0.2s ease-in-out;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 0.3rem;
+    text-indent: 0.3rem;
+}
+.offerNames .offerName:hover {
+    color: rgb(242, 170, 76);
+    border-color: rgb(232, 231, 230);
+}
+.offerNames span {
+    font-size: 2rem;
+    color: rgb(242, 170, 76);
+}
+.offerContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.offerElements {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 60%;
+    gap: 1rem;
+}
+.offerElements.active {
+    display: flex;
+}
+.offerElements .offerElement {
+    z-index: 0;
+    width: 32.3%;
+    list-style-type: none;
+    background: rgb(24, 24, 26);
+    color:rgb(232, 231, 230);
+    transition: 0.2s ease-in-out;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+.offerElements .offerElement:hover {
+    background: rgba(0,0,0,0.05);
+    color: rgb(24, 24, 26);
+}
+.offerElement img {
+    width: 10rem;
+    height: 10rem;
+}
+.offerElement p {
+    font-size: 0.9rem;
+}
 
 @media only screen and (max-width: 950px) {
     .frontShortDesc {
@@ -751,6 +823,70 @@ footer .contactText {
     .downFooter {
         margin-top: 25rem;
         text-align: center;
+    }
+    .offerNames {
+        gap: 1rem;
+    }
+    .offerNames .offerName {
+        font-size: 1.3rem;
+    }
+    .offerNames span {
+        font-size: 1.3rem;
+    }
+    
+}
+@media only screen and (max-width: 1800px) {
+    .offerElements {
+        width: 70%;
+    }
+    .offerElement {
+        width: 50%;
+    }
+    
+}
+@media only screen and (max-width: 1600px) {
+    .offerElements {
+        width: 100%;
+    }
+    .offerElement {
+        min-width: 25%;
+        max-width: 30%;
+    }
+    footer {
+        margin-top: 45rem;
+    }
+}
+@media only screen and (max-width: 1500px) {
+    .offerElements {
+        width: 100%;
+    }
+    .offerElement {
+        min-width: 35%;
+    }
+    footer {
+        margin-top: 72rem;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .offerElements {
+        width: 100%;
+    }
+    .offerElement {
+        min-width: 70% !important;
+    }
+    footer {
+        margin-top: 150rem;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .offerElements {
+        width: 100%;
+    }
+    .offerElement {
+        min-width: 90% !important;
+    }
+    footer {
+        margin-top: 150rem;
     }
 }
 
