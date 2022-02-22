@@ -3,23 +3,26 @@ const topMenu = document.querySelector('.topMenu');
 const menuPosition = topMenu.offsetTop;
 const mobileMenuBtn = document.querySelector('.mobileMenuBtn');
 const offerBox = document.querySelector('.offerBox');
-const frontLongDesc = document.querySelector('.frontLongDesc');
-const toggleOfferPosition = frontLongDesc.offsetTop;
 const goTopBtn = document.querySelector('.goTopBtn');
 let shortDescText = document.querySelector('.shortDescText');
+let indexSite = document.querySelector('.indexSite');
 
 const stickyMenu = () => {
     if (document.documentElement.clientWidth > 950) {
         if (window.pageYOffset >= menuPosition) {
             topMenu.classList.add('stickyMenu');
+            indexSite.style.display = 'flex';
         }
         else {
             topMenu.classList.remove('stickyMenu');
+            indexSite.style.display = 'none';
         }
     }
 }
 
 const toggleOfferBox = () => {
+    const frontLongDesc = document.querySelector('.frontLongDesc');
+    const toggleOfferPosition = frontLongDesc.offsetTop;
     if (document.documentElement.clientWidth > 950) {
         if (window.pageYOffset >= toggleOfferPosition) {
             offerBox.style.display = 'flex';
@@ -68,6 +71,7 @@ const changeDescText = () => {
 }
 
 const loadingSite = (() => {
+    const frontLongDesc = document.querySelector('.frontLongDesc');
     const loadingLongDesc = () => {
         if (document.documentElement.clientWidth > 950) {
             if (window.pageYOffset >= frontLongDesc.offsetTop - 500) {

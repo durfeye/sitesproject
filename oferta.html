@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAMA - producent opakowań foliowych</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/40fe8f2b83.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <video autoplay muted loop class="backgroundVideo">
+        <source src="background.mp4" type="video/mp4">
+    </video>
+    <header>
+        <nav class="topNav">
+            <!-- <ul class="contactOptions">
+                <li class="contactOption">+48 000 000 000</li>
+                <li class="contactOption">firma@firma.pl</li>
+            </ul> -->
+            <section class="logo">
+                <span class="orangeColored">K</span>AMA
+            </section>
+            <section class="menu">
+                <button class="mobileMenuBtn">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <ul class="topMenu">
+                    <a href="index.html"><li class="menuItem indexSite">KAMA</li></a>
+                    <a href="#aboutUs"><li class="menuItem">O NAS</li></a>
+                    <a href="oferta.html"><li class="menuItem">OFERTA</li></a>
+                    <a href="#contactFooter"><li class="menuItem">KONTAKT</li></a>
+                </ul>
+            </section>
+        </nav>
+        <section class="frontShortDesc">
+            <h1>
+                <span class="orangeColored">S</span>tawiamy na <span class="shortDescText thirdChange">najwyższą jakość</span>
+            </h1>
+            <p>
+                Producent wyrobów foliowych LDPE, HDPE, PA/PE <br />do wielu gałęzi przemysłu...
+            </p>
+            <div class="frontBtns">
+                <button class="frontBtn writeToUs">
+                    Napisz
+                </button>
+                <button class="frontBtn offer">
+                    Oferta
+                </button>
+                <button class="frontBtn callToUs">
+                    Zadzwoń
+                </button>
+            </div>
+        </section>
+        <button class="goDownBtn">
+            <i class="fas fa-mouse"></i>
+        </button>
+    </header>
+    
+    <section class="offerContainer">
+        HELLO
+    </section>
+
+    <footer class="footer" id="contactFooter">
+        <div class="contactFooter">
+            <form class="contactForm" novalidate>
+                <p><span class="orangeColored">—</span> SKONTAKTUJ SIĘ Z NAMI <span class="orangeColored">—</span></p>
+                <label from="firstName">
+                    <input type="text" id="firstName" name="firstName" minlength="3" pattern="[A-Za-z]*"
+                        placeholder="Imię i nazwisko" required>
+                    <span class="errorMsg countryError" aria-live="polite"></span>
+                </label>
+                <label from="lastName">
+                    <input type="text" id="lastName" name="lastName" minlength="9" pattern="[0-9]*"
+                        placeholder="Numer telefonu" required>
+                    <span class="errorMsg countryError" aria-live="polite"></span>
+                </label>
+                <label for="mail">
+                    <input type="email" id="mail" name="mail" placeholder="Adres e-mail" required>
+                    <span class="errorMsg mailError" aria-live="polite"></span>
+                </label>
+                <label for="message">
+                    <textarea type="text" id="message" name="message" placeholder="Wiadomość" required></textarea>
+                    <span class="errorMsg validatePassError" aria-live="polite"></span>
+                </label>
+                <button>WYŚLIJ</button>
+            </form>
+            <h2 class="mapName"><span class="orangeColored">—</span> NASZA LOKALIZACJA <span
+                    class="orangeColored">—</span></h2>
+            <iframe allowfullscreen="" frameborder="0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAfEFYuvwHE5c_NypEg9Qog_UHox772iCA&amp;q=Poland%2C+S%C5%82upsk+Poniatowskiego+27&amp;zoom=15"
+                width="100%" height="300"></iframe>
+        </div>
+        <div class="contactText">
+            <h1>KONTAKT</h1>
+        </div>
+        <div class="footerLinks">
+            <div class="upperFooter">
+                <div class="footerAboutUs">
+                    <h2>KAMA - dla nas liczy się jakość...</h2>
+                    <p>Firma rodzinna - na rynku od 2012 roku, będąca wynikiem 20 letniego doświadczenia w branży
+                        opakowań, zajmująca się produkcją wyrobów foliowych LDPE, HDPE, PA/PE.</p>
+                </div>
+                <div class="footerLocation">
+                    <h2>Dane kontaktowe</h2>
+                    <p>ul. Józefa Poniatowskiego 27</p>
+                    <p>Słupsk 76-200</p>
+                    <p>biuro@kama.slupsk.pl</p>
+                    <p>+48 500 719 801</p>
+                </div>
+            </div>
+            <div class="downFooter">
+                <div class="footerContactForms">
+                    <i class="fa-solid fa-square-phone"></i>
+                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-brands fa-facebook-square"></i>
+                </div>
+                <ul class="footerMenu">
+                    <a href="#aboutUs"><li class="footerItem">O NAS</li></a>
+                    <a href="oferta.html"><li class="footerItem">OFERTA</li></a>
+                    <a href="#contactFooter"><li class="footerItem">KONTAKT</li></a>
+                </ul>
+                <div class="footerEnding">
+                    <p>KAMA P.P.H.U Katarzyna Szubert © 2022</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="goTopBtn">
+        <a href="#">
+            <i class="fa-solid fa-circle-arrow-up"></i>
+        </a>
+    </div>
+</body>
+
+</html>
