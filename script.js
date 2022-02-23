@@ -313,7 +313,6 @@ const showError = (() => {
 userName.addEventListener('input', () => {
     if (userName.validity.valid) {
         userNameError.textContent = '';
-        userName.value = '';
     }
     else {
         showError.userNameErr();
@@ -323,7 +322,6 @@ userName.addEventListener('input', () => {
 phoneNumber.addEventListener('input', () => {
     if (phoneNumber.validity.valid) {
         phoneNumberError.textContent = '';
-        phoneNumber.value = '';
     }
     else {
         showError.phoneNumberErr();
@@ -333,7 +331,6 @@ phoneNumber.addEventListener('input', () => {
 email.addEventListener('input', () => {
     if (email.validity.valid) {
         emailError.textContent = '';
-        email.value = '';
     }
     else {
         showError.emailErr();
@@ -350,7 +347,11 @@ form.addEventListener('submit', (e) => {
         e.preventDefault();
     }
     else {
-        submitMsg.textContent = 'Wszystkie pola muszą być poprawnie wypełnione!';
+        submitMsg.textContent = 'Wiadomość wysłana!';
+        userName.value = '';
+        phoneNumber.value = '';
+        email.value = '';
+        message.value = '';
     }
     
 });
