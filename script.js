@@ -242,28 +242,6 @@ offerNames.forEach(singleName => {
     });
 });
 
-function formSubmit(event) {
-    var url = "/post/url/here";
-    var request = new XMLHttpRequest();
-    request.open('POST', url, true);
-    request.onload = function () { // request successful
-        // we can use server response to our request now
-        console.log(request.responseText);
-    };
-
-    request.onerror = function () {
-        // request failed
-    };
-
-    request.send(new FormData(event.target)); // create FormData from form that triggered event
-    event.preventDefault();
-}
-
-// and you can attach form submit event like this for example
-function attachFormSubmitEvent(formId) {
-    document.getElementById(formId).addEventListener("submit", formSubmit);
-}
-
 const form = document.querySelector('.contactForm');
 
 const userName = document.querySelector('#userName');
@@ -337,6 +315,13 @@ email.addEventListener('input', () => {
     }
 });
 
+const clearFormInputs = () => {
+        userName.value = '';
+        phoneNumber.value = '';
+        email.value = '';
+        message.value = '';
+}
+
 form.addEventListener('submit', (e) => {
     if(!userName.validity.valid
     || !phoneNumber.validity.valid
@@ -347,11 +332,7 @@ form.addEventListener('submit', (e) => {
         e.preventDefault();
     }
     else {
-        submitMsg.textContent = 'Wiadomość wysłana!';
-        userName.value = '';
-        phoneNumber.value = '';
-        email.value = '';
-        message.value = '';
+        submitMsg.textContent = 'Wiadomość została wysłana!';
+        submitMsg.classList.remove('error');
     }
-    
 });

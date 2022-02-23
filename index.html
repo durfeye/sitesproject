@@ -182,12 +182,12 @@
     <footer class="footer" id="contactFooter">
         <div class="contactFooter">
             <iframe name="hiddenFrame" width="0" height="0" style="display: none;"></iframe>
-            <form action="sendmail.php" method="POST" class="contactForm" target="hiddenFrame" novalidate>
+            <form action="sendmail.php" method="POST" class="contactForm" target="hiddenFrame" onsubmit="setTimeout(clearFormInputs, 200)" novalidate>
                 <p><span class="orangeColored">—</span> SKONTAKTUJ SIĘ Z NAMI <span class="orangeColored">—</span></p>
                 <label from="firstName">
-                    <input type="text" id="userName" name="userName" pattern="[A-Za-z]*"
+                    <input type="text" id="userName" name="userName" minlength="1" pattern="[A-Za-z]*"
                         placeholder="Imię i nazwisko" required>
-                    <span class="errorMsg nameError" aria-live="polite"></span>
+                    <span class="errorMsg userNameError" aria-live="polite"></span>
                 </label>
                 <label from="phoneNumber">
                     <input type="text" id="phoneNumber" name="phoneNumber" minlength="9" pattern="[0-9]*"
