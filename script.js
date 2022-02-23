@@ -241,3 +241,25 @@ offerNames.forEach(singleName => {
         }
     });
 });
+
+function formSubmit(event) {
+    var url = "/post/url/here";
+    var request = new XMLHttpRequest();
+    request.open('POST', url, true);
+    request.onload = function() { // request successful
+    // we can use server response to our request now
+      console.log(request.responseText);
+    };
+  
+    request.onerror = function() {
+      // request failed
+    };
+  
+    request.send(new FormData(event.target)); // create FormData from form that triggered event
+    event.preventDefault();
+  }
+  
+  // and you can attach form submit event like this for example
+  function attachFormSubmitEvent(formId){
+    document.getElementById(formId).addEventListener("submit", formSubmit);
+  }
