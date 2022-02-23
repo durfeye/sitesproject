@@ -172,17 +172,17 @@
     </section>
     <footer class="footer" id="contactFooter">
         <div class="contactFooter">
-            <form action="sendmail.php" class="contactForm" novalidate>
+            <form action="https://formsubmit.co/polishl0rd2@gmail.com" method="POST" class="contactForm" novalidate>
                 <p><span class="orangeColored">—</span> SKONTAKTUJ SIĘ Z NAMI <span class="orangeColored">—</span></p>
                 <label from="firstName">
                     <input type="text" id="userName" name="userName" minlength="3" pattern="[A-Za-z]*"
                         placeholder="Imię i nazwisko" required>
-                    <span class="errorMsg countryError" aria-live="polite"></span>
+                    <span class="errorMsg nameError" aria-live="polite"></span>
                 </label>
                 <label from="lastName">
                     <input type="text" id="phoneNumber" name="phoneNumber" minlength="9" pattern="[0-9]*"
                         placeholder="Numer telefonu" required>
-                    <span class="errorMsg countryError" aria-live="polite"></span>
+                    <span class="errorMsg phoneError" aria-live="polite"></span>
                 </label>
                 <label for="mail">
                     <input type="email" id="mail" name="mail" placeholder="Adres e-mail" required>
@@ -190,7 +190,7 @@
                 </label>
                 <label for="message">
                     <textarea type="text" id="message" name="message" placeholder="Wiadomość" required></textarea>
-                    <span class="errorMsg validatePassError" aria-live="polite"></span>
+                    <span class="errorMsg messageError" aria-live="polite"></span>
                 </label>
                 <input type="submit" value="WYŚLIJ">
             </form>
