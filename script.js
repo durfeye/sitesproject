@@ -259,7 +259,7 @@ const messageError = document.querySelector('.messageError');
 const submitMsg = document.querySelector('.submitMsg');
 
 const showError = (() => {
-    
+
     const userNameErr = () => {
         if (userName.validity.valueMissing) {
             userNameError.textContent = 'Pole nie może być puste';
@@ -316,17 +316,16 @@ email.addEventListener('input', () => {
 });
 
 const clearFormInputs = () => {
-        userName.value = '';
-        phoneNumber.value = '';
-        email.value = '';
-        message.value = '';
+    userName.value = '';
+    phoneNumber.value = '';
+    email.value = '';
+    message.value = '';
 }
 
 form.addEventListener('submit', (e) => {
-    if(!userName.validity.valid
-    || !phoneNumber.validity.valid
-    || !email.validity.valid) 
-    {
+    if (!userName.validity.valid
+        || !phoneNumber.validity.valid
+        || !email.validity.valid) {
         submitMsg.textContent = 'Wszystkie pola muszą być poprawnie wypełnione!';
         submitMsg.classList.add('error');
         e.preventDefault();
