@@ -309,8 +309,8 @@ const showError = (() => {
 })();
 
 userName.addEventListener('input', () => {
-    if (country.validity.valid) {
-        countryError.textContent = '';
+    if (userName.validity.valid) {
+        userNameError.textContent = '';
     }
     else {
         showError.userNameErr();
@@ -318,8 +318,8 @@ userName.addEventListener('input', () => {
 });
 
 phoneNumber.addEventListener('input', () => {
-    if (zipcode.validity.valid) {
-        zipcodeError.textContent = '';
+    if (phoneNumber.validity.valid) {
+        phoneNumberError.textContent = '';
     }
     else {
         showError.phoneNumberErr();
