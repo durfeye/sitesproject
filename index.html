@@ -33,16 +33,25 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <ul class="topMenu">
-                    <a href="index.html"><li class="menuItem indexSite">KAMA</li></a>
-                    <a href="#aboutUs"><li class="menuItem">O NAS</li></a>
-                    <a href="oferta.html"><li class="menuItem">OFERTA</li></a>
-                    <a href="#contactFooter"><li class="menuItem">KONTAKT</li></a>
+                    <a href="index.html">
+                        <li class="menuItem indexSite">KAMA</li>
+                    </a>
+                    <a href="#aboutUs">
+                        <li class="menuItem">O NAS</li>
+                    </a>
+                    <a href="oferta.html">
+                        <li class="menuItem">OFERTA</li>
+                    </a>
+                    <a href="#contactFooter">
+                        <li class="menuItem">KONTAKT</li>
+                    </a>
                 </ul>
             </section>
         </nav>
         <section class="frontShortDesc">
             <h1>
-                <span class="orangeColored">S</span>tawiamy na <span class="shortDescText thirdChange">najwyższą jakość</span>
+                <span class="orangeColored">S</span>tawiamy na <span class="shortDescText thirdChange">najwyższą
+                    jakość</span>
             </h1>
             <p>
                 Producent wyrobów foliowych LDPE, HDPE, PA/PE <br />do wielu gałęzi przemysłu...
@@ -172,18 +181,18 @@
     </section>
     <footer class="footer" id="contactFooter">
         <div class="contactFooter">
-           <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
+            <iframe name="hiddenFrame" width="0" height="0" style="display: none;"></iframe>
             <form action="sendmail.php" method="POST" class="contactForm" target="hiddenFrame" novalidate>
                 <p><span class="orangeColored">—</span> SKONTAKTUJ SIĘ Z NAMI <span class="orangeColored">—</span></p>
                 <label from="firstName">
-                    <input type="text" id="userName" name="userName" minlength="3" pattern="[A-Za-z]*"
+                    <input type="text" id="userName" name="userName" pattern="[A-Za-z]*"
                         placeholder="Imię i nazwisko" required>
                     <span class="errorMsg nameError" aria-live="polite"></span>
                 </label>
-                <label from="lastName">
+                <label from="phoneNumber">
                     <input type="text" id="phoneNumber" name="phoneNumber" minlength="9" pattern="[0-9]*"
                         placeholder="Numer telefonu" required>
-                    <span class="errorMsg phoneError" aria-live="polite"></span>
+                    <span class="errorMsg phoneNumberError" aria-live="polite"></span>
                 </label>
                 <label for="mail">
                     <input type="email" id="mail" name="mail" placeholder="Adres e-mail" required>
@@ -194,6 +203,7 @@
                     <span class="errorMsg messageError" aria-live="polite"></span>
                 </label>
                 <input type="submit" value="WYŚLIJ">
+                <span class="errorMsg submitMsg" aria-live="polite"></span>
             </form>
             <h2 class="mapName"><span class="orangeColored">—</span> NASZA LOKALIZACJA <span
                     class="orangeColored">—</span></h2>
@@ -226,9 +236,15 @@
                     <i class="fa-brands fa-facebook-square"></i>
                 </div>
                 <ul class="footerMenu">
-                    <a href="#aboutUs"><li class="footerItem">O NAS</li></a>
-                    <a href="oferta.html"><li class="footerItem">OFERTA</li></a>
-                    <a href="#contactFooter"><li class="footerItem">KONTAKT</li></a>
+                    <a href="#aboutUs">
+                        <li class="footerItem">O NAS</li>
+                    </a>
+                    <a href="oferta.html">
+                        <li class="footerItem">OFERTA</li>
+                    </a>
+                    <a href="#contactFooter">
+                        <li class="footerItem">KONTAKT</li>
+                    </a>
                 </ul>
                 <div class="footerEnding">
                     <p>KAMA P.P.H.U Katarzyna Szubert © 2022</p>

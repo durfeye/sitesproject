@@ -278,6 +278,8 @@ const emailError = document.querySelector('.mailError');
 const message = document.querySelector('#message');
 const messageError = document.querySelector('.messageError');
 
+const submitMsg = document.querySelector('.submitMsg');
+
 const showError = (() => {
     
     const userNameErr = () => {
@@ -294,8 +296,8 @@ const showError = (() => {
         }
     }
     const emailErr = () => {
-        if (password.validity.valueMissing) {
-            passwordError.textContent = 'Pole nie może być puste';
+        if (email.validity.valueMissing) {
+            emailError.textContent = 'Pole nie może być puste';
         }
         else if (email.validity.typeMismatch) {
             emailError.textContent = 'Wprowadź poprawny adres e-mail';
@@ -311,6 +313,7 @@ const showError = (() => {
 userName.addEventListener('input', () => {
     if (userName.validity.valid) {
         userNameError.textContent = '';
+        userName.value = '';
     }
     else {
         showError.userNameErr();
@@ -320,6 +323,7 @@ userName.addEventListener('input', () => {
 phoneNumber.addEventListener('input', () => {
     if (phoneNumber.validity.valid) {
         phoneNumberError.textContent = '';
+        phoneNumber.value = '';
     }
     else {
         showError.phoneNumberErr();
@@ -329,6 +333,7 @@ phoneNumber.addEventListener('input', () => {
 email.addEventListener('input', () => {
     if (email.validity.valid) {
         emailError.textContent = '';
+        email.value = '';
     }
     else {
         showError.emailErr();
@@ -340,11 +345,12 @@ form.addEventListener('submit', (e) => {
     || !phoneNumber.validity.valid
     || !email.validity.valid) 
     {
-        alert('Wszystkie pola muszą być poprawnie wypełnione!')
+        submitMsg.textContent = 'Wszystkie pola muszą być poprawnie wypełnione!';
+        submitMsg.classList.add('error');
         e.preventDefault();
     }
     else {
-        alert('Hight Five!');
+        submitMsg.textContent = 'Wszystkie pola muszą być poprawnie wypełnione!';
     }
     
 });
