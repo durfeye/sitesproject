@@ -172,7 +172,8 @@
     </section>
     <footer class="footer" id="contactFooter">
         <div class="contactFooter">
-            <form action="sendmail.php" method="POST" class="contactForm" novalidate>
+           <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
+            <form action="sendmail.php" method="POST" class="contactForm" target="hiddenFrame" novalidate>
                 <p><span class="orangeColored">—</span> SKONTAKTUJ SIĘ Z NAMI <span class="orangeColored">—</span></p>
                 <label from="firstName">
                     <input type="text" id="userName" name="userName" minlength="3" pattern="[A-Za-z]*"
