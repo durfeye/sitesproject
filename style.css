@@ -78,7 +78,7 @@ header {
     border-bottom: 1px solid transparent;
     transition: 0.2s ease-in-out;
     padding-bottom: 0.3rem;
-    text-indent: 0.3rem;
+    text-indent: -0.3rem;
 }
 .topMenu a {
     color: rgb(232, 231, 230);
@@ -444,14 +444,14 @@ iframe {
     margin: 0 0 -1.5rem 2rem;
     color: rgb(232, 231, 230);
 }
-.contactForm button {
+.contactForm input[type='submit'] {
     width: 10rem;
     height: 3rem;
     background: white;
     border: 0;
     font-weight: bold;
 }
-.contactForm button:hover {
+.contactForm input[type='submit']:hover {
     background: rgb(242, 170, 76);
     color: rgb(232, 231, 230);
     cursor: pointer;
@@ -471,6 +471,19 @@ input::placeholder {
 }
 input:focus {
     outline: none;
+}
+.errorMsg {
+    color: red;
+    height: 1rem;
+    font-size: 0.7rem;
+    text-align: center;
+}
+input:focus:invalid {
+    border: 0;
+}
+label {
+    display: flex;
+    flex-direction: column;
 }
 textarea {
     width: 20rem;
@@ -693,6 +706,14 @@ footer .contactText {
 .offerElement p {
     font-size: 0.9rem;
 }
+.submitMsg.error {
+    color: red !important;
+}
+.submitMsg {
+    color: green !important;
+    font-size: 0.8rem !important;
+}
+
 
 @media only screen and (max-width: 950px) {
     .frontShortDesc {
