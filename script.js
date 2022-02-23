@@ -246,20 +246,105 @@ function formSubmit(event) {
     var url = "/post/url/here";
     var request = new XMLHttpRequest();
     request.open('POST', url, true);
-    request.onload = function() { // request successful
-    // we can use server response to our request now
-      console.log(request.responseText);
+    request.onload = function () { // request successful
+        // we can use server response to our request now
+        console.log(request.responseText);
     };
-  
-    request.onerror = function() {
-      // request failed
+
+    request.onerror = function () {
+        // request failed
     };
-  
+
     request.send(new FormData(event.target)); // create FormData from form that triggered event
     event.preventDefault();
-  }
-  
-  // and you can attach form submit event like this for example
-  function attachFormSubmitEvent(formId){
+}
+
+// and you can attach form submit event like this for example
+function attachFormSubmitEvent(formId) {
     document.getElementById(formId).addEventListener("submit", formSubmit);
-  }
+}
+
+const form = document.querySelector('.contactForm');
+
+const userName = document.querySelector('#userName');
+const userNameError = document.querySelector('.userNameError');
+
+const phoneNumber = document.querySelector('#phoneNumber');
+const phoneNumberError = document.querySelector('.phoneNumberError');
+
+const email = document.querySelector('#mail');
+const emailError = document.querySelector('.mailError');
+
+const message = document.querySelector('#message');
+const messageError = document.querySelector('.messageError');
+
+const showError = (() => {
+    
+    const userNameErr = () => {
+        if (userName.validity.valueMissing) {
+            userNameError.textContent = 'Pole nie może być puste';
+        }
+    }
+    const phoneNumberErr = () => {
+        if (phoneNumber.validity.valueMissing) {
+            phoneNumberError.textContent = 'Pole nie może być puste';
+        }
+        else if (phoneNumber.validity.tooShort) {
+            phoneNumberError.textContent = 'Numer musi mieć minimum 9 cyfr'
+        }
+    }
+    const emailErr = () => {
+        if (password.validity.valueMissing) {
+            passwordError.textContent = 'Pole nie może być puste';
+        }
+        else if (email.validity.typeMismatch) {
+            emailError.textContent = 'Wprowadź poprawny adres e-mail';
+        }
+    }
+    return {
+        userNameErr,
+        phoneNumberErr,
+        emailErr,
+    }
+})();
+
+userName.addEventListener('input', () => {
+    if (country.validity.valid) {
+        countryError.textContent = '';
+    }
+    else {
+        showError.userNameErr();
+    }
+});
+
+phoneNumber.addEventListener('input', () => {
+    if (zipcode.validity.valid) {
+        zipcodeError.textContent = '';
+    }
+    else {
+        showError.phoneNumberErr();
+    }
+});
+
+email.addEventListener('input', () => {
+    if (email.validity.valid) {
+        emailError.textContent = '';
+    }
+    else {
+        showError.emailErr();
+    }
+});
+
+form.addEventListener('submit', (e) => {
+    if(!userName.validity.valid
+    || !phoneNumber.validity.valid
+    || !email.validity.valid) 
+    {
+        alert('Wszystkie pola muszą być poprawnie wypełnione!')
+        e.preventDefault();
+    }
+    else {
+        alert('Hight Five!');
+    }
+    
+});
