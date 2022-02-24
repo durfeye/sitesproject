@@ -203,7 +203,7 @@ header {
     padding: 3.5rem 0 5rem 0;
     color: rgb(232, 231, 230);
     gap: 3rem;
-    min-height: 27rem;
+    /* min-height: 27rem; */
 }
 .aboutUs .frontLongDesc {
     opacity: 0;
@@ -258,6 +258,9 @@ header {
     width: 14rem;
     opacity: 0;
 }
+.usageElement:first-child {
+    padding-top: 1rem;
+}
 .usageElement:first-child.active {
     opacity: 1;
     -webkit-animation: slide-top 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -302,7 +305,6 @@ header {
     z-index: 2;
     background: rgb(232, 231, 230);
     width: 100%;
-    margin-top: -100rem;
 }
 .whyUsContent {
     width: 80%;
@@ -339,8 +341,9 @@ header {
 .checkOurOffer {
     z-index: -1;
     background: rgb(232, 231, 230);
-    min-height: 100rem;
+    /* min-height: 100rem; */
     min-width: 100%;
+    min-height: 42rem;
 }
 .offerShadow {
     z-index: -1;
@@ -356,7 +359,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40rem;
+    /* margin-top: 40rem; */
     gap: 10rem;
 }
 .trustUs {
@@ -416,7 +419,7 @@ header {
 footer {
     z-index: 2;
     display: flex;
-    margin-top: 45rem;
+    /* margin-top: 45rem; */
     min-width: 100%;
     min-height: 60rem;
     background: rgb(232, 231, 230);
@@ -605,8 +608,7 @@ footer .contactText {
     padding: 3.5rem 0 5rem 0;
     color: rgb(24, 24, 26);
     gap: 3rem;
-    min-height: 70rem;
-    margin-bottom: -45rem;
+    /* margin-bottom: -45rem; */
 }
 .offerNamesBox {
     display: flex;
@@ -716,6 +718,20 @@ footer .contactText {
 
 
 @media only screen and (max-width: 950px) {
+    .usage {
+        min-height: unset;
+    }
+    .checkOurOffer {
+        min-height: unset;
+        padding: 2rem 0 2rem 0;
+    }
+    .offerShadow {
+        min-height: unset;
+    }
+    .offerBox {
+        top: 0;
+        bottom: 0;
+    }
     .frontShortDesc {
         margin-top: 2rem;
     }
@@ -813,19 +829,18 @@ footer .contactText {
     }
     .usageElements {
         flex-direction: column;
-        margin-top: 16rem;
-        margin-bottom: 50rem;
+        /* margin-top: 16rem; */
+        /* margin-bottom: 50rem; */
     }
     .usageElement {
         opacity: 1;
     }
-    .checkOurOffer {
+    /* .checkOurOffer {
         min-height: 60rem;
-        margin-top: 35rem;
-    }
-    .whyUs {
+    } */
+    /* .whyUs {
         margin-top: -60rem;
-    }
+    } */
     .whyUsContent {
         width: 100%;
     }
@@ -851,8 +866,8 @@ footer .contactText {
         display: none;
     }
     footer {
-        min-height: 70rem;
-        margin-top: 16rem;
+        /* min-height: 70rem; */
+        /* margin-top: 16rem; */
     }
     footer .contactFooter {
         width: 100%;
@@ -913,9 +928,6 @@ footer .contactText {
         min-width: 25%;
         max-width: 30%;
     }
-    footer.active {
-        margin-top: 45rem;
-    }
 }
 @media only screen and (max-width: 1500px) {
     .offerElements {
@@ -923,9 +935,6 @@ footer .contactText {
     }
     .offerElement {
         min-width: 35%;
-    }
-    footer.active {
-        margin-top: 72rem;
     }
 }
 @media only screen and (max-width: 900px) {
@@ -935,9 +944,6 @@ footer .contactText {
     .offerElement {
         min-width: 70% !important;
     }
-    footer.active {
-        margin-top: 150rem;
-    }
 }
 @media only screen and (max-width: 500px) {
     .offerElements {
@@ -946,9 +952,7 @@ footer .contactText {
     .offerElement {
         min-width: 90% !important;
     }
-    footer.active {
-        margin-top: 150rem;
-    }
+
 }
 
 @keyframes jumping {
