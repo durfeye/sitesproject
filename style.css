@@ -13,10 +13,14 @@ html, body {
     scroll-behavior: smooth;
     background: rgb(232, 231, 230);
 }
+body {
+    overflow-x: hidden;
+}
 .backgroundVideo {
     position: absolute;
-    min-width: 100%;
     min-height: 100%;
+    min-width: 100%;
+    top: 0;
     left: 0;
     right: 0;
     z-index: 0;
@@ -78,7 +82,7 @@ header {
     border-bottom: 1px solid transparent;
     transition: 0.2s ease-in-out;
     padding-bottom: 0.3rem;
-    text-indent: -0.3rem;
+    text-indent: 0.3rem;
 }
 .topMenu a {
     color: rgb(232, 231, 230);
@@ -204,6 +208,7 @@ header {
     color: rgb(232, 231, 230);
     gap: 3rem;
     /* min-height: 27rem; */
+    /* margin-top: -1.5rem; */
 }
 .aboutUs .frontLongDesc {
     opacity: 0;
@@ -674,22 +679,69 @@ footer .contactText {
     justify-content: center;
     width: 100%;
 }
+.offerDesc {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -3.2rem;
+    margin-bottom: 3rem;
+    padding: 5% 10% 0 10%;
+    font-size: 1.2rem;
+    background: rgb(24, 24, 26);
+    color: rgb(232, 231, 230);
+    text-align: center;
+    width: 100%;
+}
+.offerOptions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 0 6rem 2.5rem 1rem;
+    gap: 8rem;
+}
+.offerOptions h2 {
+    font-size: 1.1rem;
+}
+.offerDesc ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0;
+}
+.offerDesc ul li {
+    list-style: none;
+}
 .offerElements {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.offerItem {
+    display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
+    margin: 0;
     text-align: center;
     flex-wrap: wrap;
-    width: 60%;
     gap: 1rem;
 }
 .offerElements.active {
     display: flex;
 }
-.offerElements .offerElement {
+.offerItem .offerElement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     z-index: 0;
     width: 32.3%;
+    height: 25rem;
     list-style-type: none;
     background: rgb(24, 24, 26);
     color:rgb(232, 231, 230);
@@ -697,7 +749,7 @@ footer .contactText {
     padding: 1.5rem;
     cursor: pointer;
 }
-.offerElements .offerElement:hover {
+.offerItem .offerElement:hover {
     background: rgba(0,0,0,0.05);
     color: rgb(24, 24, 26);
 }
@@ -707,6 +759,8 @@ footer .contactText {
 }
 .offerElement p {
     font-size: 0.9rem;
+    padding: 0;
+    margin: 0.5rem;
 }
 .submitMsg.error {
     color: red !important;
@@ -718,6 +772,11 @@ footer .contactText {
 
 
 @media only screen and (max-width: 950px) {
+    .offerOptions {
+        flex-direction: column;
+        gap: 0;
+        padding: 0 0 3rem 0;
+    }
     .usage {
         min-height: unset;
     }
